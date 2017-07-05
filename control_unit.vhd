@@ -2,9 +2,6 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-library work;
-use work.segm_mips_const_pkg.all;
-
 -- Unidad de control: genera señales de control para los componentes a partir de 
 -- los bits del codigo de la instruccion.
 
