@@ -22,7 +22,7 @@ entity reg_MEM_WB is
 
     alu_address_out: out std_logic_vector(31 downto 0);
 
-    mux_out: out std_logic;
+    mux_out: out std_logic);
 
 end reg_MEM_WB;
 
@@ -37,7 +37,7 @@ begin
       mux_out <= (others => '0');
     elsif (clk'event and clk = '1') then
       if (we = '1') then
-      wb_out <= (wb_in;
+      wb_out <= wb_in;
       read_data_out <= read_data_in;
       alu_address_out <= alu_address_in;
       mux_out <= mux_in;

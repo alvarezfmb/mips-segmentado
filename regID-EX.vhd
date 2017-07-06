@@ -14,9 +14,9 @@ entity reg_ID_EX is
     pc_in: in std_logic_vector(31 downto 0);
 
     data1_rd_in : in STD_LOGIC_VECTOR (31 downto 0);
-    data2_rd_in : in STD_LOGIC_VECTOR (31 downto 0));
+    data2_rd_in : in STD_LOGIC_VECTOR (31 downto 0);
 
-    signext_in: in std_logic_vector(31 downto 0));
+    signext_in: in std_logic_vector(31 downto 0);
     
     instr1_in: in std_logic_vector(4 downto 0);
     instr2_in: in std_logic_vector(4 downto 0);
@@ -30,12 +30,12 @@ entity reg_ID_EX is
     pc_out: out std_logic_vector(31 downto 0);
 
     data1_rd_out : out STD_LOGIC_VECTOR (31 downto 0);
-    data2_rd_out : out STD_LOGIC_VECTOR (31 downto 0));
+    data2_rd_out : out STD_LOGIC_VECTOR (31 downto 0);
 
-    signext_out: out std_logic_vector(31 downto 0));
+    signext_out: out std_logic_vector(31 downto 0);
     
     instr1_out: out std_logic_vector(4 downto 0);
-    instr2_out: out std_logic_vector(4 downto 0);
+    instr2_out: out std_logic_vector(4 downto 0));
 end reg_ID_EX;
 
 architecture beh of reg_ID_EX is
