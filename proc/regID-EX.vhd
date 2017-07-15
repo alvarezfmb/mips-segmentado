@@ -7,9 +7,9 @@ entity reg_ID_EX is
     -- Entrada
     clk, rst, we : in  std_logic;
 
-    wb_in: in std_logic;
-    m_in: in std_logic;
-    ex_in: in std_logic;
+    wb_in: in std_logic_vector(1 downto 0);
+    m_in: in std_logic_vector(2 downto 0);
+    ex_in: in std_logic_vector(3 downto 0);
 
     pc_in: in std_logic_vector(31 downto 0);
 
@@ -23,9 +23,9 @@ entity reg_ID_EX is
   
     -- Salida
 
-    wb_out: out std_logic;
-    m_out: out std_logic;
-    ex_out: out std_logic;
+    wb_out: out std_logic_vector(1 downto 0);
+    m_out: out std_logic_vector(2 downto 0);
+    ex_out: out std_logic_vector(3 downto 0);
 
     pc_out: out std_logic_vector(31 downto 0);
 
@@ -36,6 +36,7 @@ entity reg_ID_EX is
     
     instr1_out: out std_logic_vector(4 downto 0);
     instr2_out: out std_logic_vector(4 downto 0));
+
 end reg_ID_EX;
 
 architecture beh of reg_ID_EX is

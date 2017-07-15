@@ -2,8 +2,8 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
--- Sumador (para calcular potencial direccion de salto. Debe sumar 4 bytes,
--- longitud de cada instruccion de memoria).
+-- Sumador: utilizado para calcular siguiente instrucción del programa
+-- y dirección de salto efectiva.
 
 entity adder is
     Port (A, B : in std_logic_vector(31 downto 0);

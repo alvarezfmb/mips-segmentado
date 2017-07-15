@@ -7,22 +7,22 @@ entity reg_MEM_WB is
     -- Entrada
     clk, rst, we : in  std_logic;
 
-    wb_in: in std_logic;
+    wb_in: in std_logic_vector(1 downto 0);
 
     read_data_in: in std_logic_vector(31 downto 0);
 
     alu_address_in: in std_logic_vector(31 downto 0);
 
-    mux_in: in std_logic;
+    mux_in: in std_logic_vector(4 downto 0);
     
     -- Salida
-    wb_out: out std_logic;
+    wb_out: out std_logic_vector(1 downto 0);
 
     read_data_out: out std_logic_vector(31 downto 0);
 
     alu_address_out: out std_logic_vector(31 downto 0);
 
-    mux_out: out std_logic);
+    mux_out: out std_logic_vector(4 downto 0));
 
 end reg_MEM_WB;
 

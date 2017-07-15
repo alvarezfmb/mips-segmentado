@@ -2,21 +2,20 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.numeric_std.all;
 
+-- Unidad de control de la ALU: recibe últimos 6 bits de las instrucciones
+-- y genera señal de control para la ALU.
+
 entity alu_control is
 	port(
-		--Entradas
-		clk    : in  STD_LOGIC;         -- Reloj
-		f      : in  STD_LOGIC_VECTOR(5 downto 0); -- Campo de la instrucción FUNC
-		alu_op : in  std_logic_vector(1 downto 0); -- Señal de control de la Unidad de Control
-		--Salidas
-		alu_in : out ALU_INPUT          -- Entrada de la ALU
-	);
+		f      : in  STD_LOGIC_VECTOR(5 downto 0);
+		alu_op : in  std_logic_vector(1 downto 0);
+		alu_in : out std_logic_vector(2 downto 0)); 
 end alu_control;
 
 architecture behavioral of alu_control is
 begin
 
-process(alu_op, f, alu_in)
+process(f, alu_op)
 	begin
 		if (alu_op = "00") then
 			alu_in <= "010";

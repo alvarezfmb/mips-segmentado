@@ -4,13 +4,13 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- PC: program counter implementado con registro de 32 bits
 
-entity reg32bits is
+entity program_counter is
 	port(clk, rst, we : in  std_logic;
-	     input        : in  std_logic_vector(31 downto 0);
-	     output       : out std_logic_vector(31 downto 0));
-end reg32bits;
+		 input        : in  std_logic_vector(31 downto 0);
+		 output       : out std_logic_vector(31 downto 0));
+end program_counter;
 
-architecture reg32bits_beh of reg32bits is
+architecture program_counter_beh of program_counter is
 	signal a : std_logic_vector(31 downto 0);
 begin
 	process(clk, rst)
@@ -24,5 +24,6 @@ begin
 		end if;
 	end process;
 	output <= a;
-end reg32bits_beh;
+end program_counter_beh;
+
 

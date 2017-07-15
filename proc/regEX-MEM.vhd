@@ -7,8 +7,8 @@ entity reg_EX_MEM is
     -- Entrada
     clk, rst, we : in  std_logic;
 
-    wb_in: in std_logic;
-    m_in: in std_logic;
+    wb_in: in std_logic_vector(1 downto 0);
+    m_in: in std_logic_vector(2 downto 0);
 
     pc_in: in std_logic_vector(31 downto 0);
 
@@ -17,11 +17,11 @@ entity reg_EX_MEM is
 
     data2_rd_in : in std_logic_vector (31 downto 0);
 
-    mux_in: in std_logic;
+    mux_in: in std_logic_vector(4 downto 0);
 
     -- Salida
-    wb_out: out std_logic;
-    m_out: out std_logic;
+    wb_out: out std_logic_vector(1 downto 0);
+    m_out: out std_logic_vector(2 downto 0);
 
     pc_out: out std_logic_vector(31 downto 0);
 
@@ -30,7 +30,7 @@ entity reg_EX_MEM is
 
     data2_rd_out : out std_logic_vector (31 downto 0);
 
-    mux_out: out std_logic);
+    mux_out: out std_logic_vector(4 downto 0));
 
 end reg_EX_MEM;
 
@@ -42,7 +42,7 @@ begin
       wb_out <= (others => '0');
       m_out <= (others => '0');
       pc_out <= (others => '0');
-      alu_zero_out <= (others => '0');
+      alu_zero_out <= '0';
       alu_res_out <= (others => '0');
       data2_rd_out <= (others => '0');
       mux_out <= (others => '0');
